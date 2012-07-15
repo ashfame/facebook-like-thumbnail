@@ -41,7 +41,7 @@ function fb_like_thumbnails()
 		
 		if ( !$thumb_set ) {
 			$content = do_shortcode( $posts[0]->post_content ); // $posts is an array, fetch the first element
-			$output = preg_match_all( '/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $content, $matches);
+			$output = preg_match_all( '/<img[^>]+src=[\'"]([^\'"]+)[\'"].*>/i', $content, $matches);
 			if ( $output > 0 ) {
 				$thumb = $matches[1][0];
 				// #dirtyhack - check for nextgen loader file (if embedded as slideshow), and fallback to default
