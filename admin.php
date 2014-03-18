@@ -14,26 +14,6 @@ class Ashfame_Facebook_Like_Thumbnail_Admin {
 
 	public function fb_like_thumbnail_page() {
 		$fb_like_thumbnail_admin_hook = add_options_page( 'Facebook Like Thumbnail Setting', 'Facebook Like Thumbnail', 'manage_options', 'fb-like-thumbnail', array( $this, 'fb_like_thumbnail_options_page' ) );
-
-		// add CSS styles specific to our options page on our options page only
-		add_action( "admin_head-{$fb_like_thumbnail_admin_hook}", array( $this, 'fb_like_thumbnail_admin_style' ) );
-	}
-
-	/**
-	 * Function to add CSS styles on our Options page
-	 */
-	public function fb_like_thumbnail_admin_style() {
-		?>
-		<style type="text/css">
-			.wrap ul {
-				list-style-type:disc;
-				margin:10px 0 10px 15px;
-			}
-			.wrap ul ul {
-				list-style-type:circle;
-			}
-		</style>
-	<?php
 	}
 
 	/**
