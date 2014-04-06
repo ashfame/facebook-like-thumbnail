@@ -96,7 +96,7 @@ class Ashfame_Facebook_Like_Thumbnail {
 			}
 		}
 
-		// assign media image for using it if we managed to get a specific to context, else default will be used
+		// assign default media image if we didn't manage to get one specific to context
 		if ( ! empty( $media ) ) {
 			self::$meta_og_image = $media;
 		}
