@@ -6,9 +6,9 @@ Tags: facebook
 Author: Ashfame
 Author URI: http://blog.ashfame.com/
 Requires at least: 2.7
-Tested up to: 3.1.1
-Stable tag: 0.2
-Version: 0.2
+Tested up to: 3.8.1
+Stable tag: 0.3
+Version: 0.3
 
 Fixes the problem of random thumbnail used by Facebook when someone like/share
 
@@ -33,6 +33,9 @@ Go to Settings > Facebook Like Thumbnail and enter URL to the default image you 
 Facebook will update it for all the pages within 24hrs. If you want to refresh for a particular page manually, then you can use the Linter tool - https://developers.facebook.com/tools/lint/
 
 == Changelog ==
+
+= 0.3 =
+Complete rewrite with better architecture and the ability to plug in custom logic for figuring out media image
 
 = 0.2 =
 Switched to FB recommended meta tag og:image
