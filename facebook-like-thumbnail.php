@@ -110,7 +110,7 @@ class Ashfame_Facebook_Like_Thumbnail {
 		// Also check using strpos because when plugin is actually a symlink inside plugins folder, its plugin_basename will be based off its actual path
 		if ( $file == plugin_basename( __FILE__ ) || strpos( plugin_basename( __FILE__ ), $file ) !== false ) {
 			$settings_link = '<a href="' . admin_url( 'options-general.php?page=fb-like-thumbnail' ) . '">Settings</a>';
-			$support_link = '<a href="mailto:mail@ashfame.com">Premium Support</a>';
+			$support_link = '<a href="mailto:mail@ashfame.com?subject=' . rawurlencode('Premium Support') . '">Premium Support</a>';
 			$links = array_merge( array( $settings_link, $support_link ), $links );
 		}
 
