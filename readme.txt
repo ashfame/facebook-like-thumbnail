@@ -39,7 +39,7 @@ Complete rewrite with better architecture and the ability to plug in custom logi
 
 = 0.2 =
 Switched to FB recommended meta tag og:image
-Use featured thumnails if they exist, with a fallback to first image in the post & then the default one
+Use featured thumbnails if they exist, with a fallback to first image in the post & then the default one
 Frontpage & Search page uses the default image
 Added options page to enter default image URL, no more plugin editing required
 Deleting the plugin via WordPress dashboard will uninstall the saved data in the database
