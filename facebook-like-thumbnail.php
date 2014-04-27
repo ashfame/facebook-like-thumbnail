@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Facebook Like Thumbnail
- * Plugin URI: http://blog.ashfame.com/?p=888
+ * Plugin URI: http://wordpress.org/plugins/facebook-like-thumbnail/
  * Description: Figures out the thumbnail image to be used for Facebook & Other sites depending on meta:og tag
  * Author: Ashfame
- * Author URI: http://blog.ashfame.com/
- * Version: 0.3
+ * Author URI: http://ashfame.com/
+ * Version: 0.3.1
  * License: GPL
  * Notes: This plugin only do the job of assigning meta:og image to pages. Title and description are easily picked up from meta info or derived from page's content.
  */
@@ -14,11 +14,11 @@
 defined( 'ABSPATH' ) || die();
 
 // If we are at WordPress Admin side, load the file for option page
-is_admin() && require plugin_dir_path( __FILE__ ).'admin.php';
+is_admin() && require plugin_dir_path( __FILE__ ) . 'admin.php';
 
 class Ashfame_Facebook_Like_Thumbnail {
 
-	public static $version = '0.3';
+	public static $version = '0.3.1';
 	public static $options;
 	public static $meta_og_image; // Static variable so that it can be reused for custom code, for instance when constructing pinterest sharing link, this media image can be used
 	public static $meta_og_where = 'default fallback';
@@ -111,7 +111,8 @@ class Ashfame_Facebook_Like_Thumbnail {
 		if ( $file == plugin_basename( __FILE__ ) || strpos( plugin_basename( __FILE__ ), $file ) !== false ) {
 			$settings_link = '<a href="' . admin_url( 'options-general.php?page=fb-like-thumbnail' ) . '">Settings</a>';
 			$support_link = '<a href="mailto:mail@ashfame.com?subject=' . rawurlencode('Premium Support') . '">Premium Support</a>';
-			$links = array_merge( array( $settings_link, $support_link ), $links );
+			$report_issue_link = '<a href="https://github.com/ashfame/facebook-like-thumbnail/issues">Report Issue</a>';
+			$links = array_merge( array( $settings_link, $support_link, $report_issue_link ), $links );
 		}
 
 		return $links;

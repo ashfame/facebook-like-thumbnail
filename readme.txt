@@ -10,7 +10,7 @@ Tested up to: 3.9
 Stable tag: 0.3
 Version: 0.3
 
-Fixes the problem of random thumbnail used by Facebook when someone like/share
+Plugin for specifying context specific images to be used as thumbnail for links liked/shared on Facebook.
 
 == Description ==
 
@@ -31,7 +31,6 @@ Go to Settings > Facebook Like Thumbnail and enter URL to the default image you 
 = When is the default image used? =
 
 When plugin can’t figure out the image to use in any context, then it will use the default image.
-
 
 = Why does it still show an incorrect thumbnail? =
 
