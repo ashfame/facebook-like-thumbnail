@@ -38,6 +38,9 @@ Facebook will update it for all the pages within 24hrs. If you want to refresh f
 
 == Changelog ==
 
+= 0.3.1 =
+Minor fixes
+
 = 0.3 =
 Complete rewrite with better architecture and the ability to plug in custom logic for figuring out media image
 
