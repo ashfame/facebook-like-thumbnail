@@ -1,12 +1,12 @@
 === Plugin Name ===
 Contributors: ashfame
 Plugin Name: Facebook Like Thumbnail
-Plugin URI: http://blog.ashfame.com/?p=888
+Plugin URI: http://wordpress.org/plugins/facebook-like-thumbnail/
 Tags: facebook
 Author: Ashfame
-Author URI: http://blog.ashfame.com/
+Author URI: http://ashfame.com/
 Requires at least: 2.7
-Tested up to: 3.8.1
+Tested up to: 3.9
 Stable tag: 0.3
 Version: 0.3
 
@@ -14,7 +14,7 @@ Fixes the problem of random thumbnail used by Facebook when someone like/share
 
 == Description ==
 
-Plugin will set the thumbnail used by Facebook to featured thumbnail if available, then fallback to first image of the post and then fallback to a default image as a last resort. Also it will use the default image for your front page and for anything else, it will use the first image of the first post of the loop. You can read explaination on this post - <a href="http://blog.ashfame.com/2011/02/wordpress-plugin-fix-facebook-like-thumbnail/">Facebook Like Thumbnail WordPress plugin</a>
+Plugin will set the thumbnail used by Facebook to featured thumbnail if available, then fallback to first image of the post and then fallback to a default image as a last resort. Also it will use the default image for your front page and for anything else, it will use the first image of the first post of the loop. You can read explanation on this post - <a href="http://blog.ashfame.com/2011/02/wordpress-plugin-fix-facebook-like-thumbnail/">Facebook Like Thumbnail WordPress plugin</a>
 
 == Installation ==
 
