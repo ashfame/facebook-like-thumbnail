@@ -7,8 +7,8 @@ Author: Ashfame
 Author URI: http://ashfame.com/
 Requires at least: 2.7
 Tested up to: 3.9
-Stable tag: 0.3
-Version: 0.3
+Stable tag: trunk
+Version: 0.3.1
 
 Plugin for specifying context specific images to be used as thumbnail for links liked/shared on Facebook.
 
