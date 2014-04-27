@@ -5,7 +5,7 @@
 # main config
 PLUGINSLUG="facebook-like-thumbnail"
 CURRENTDIR=`pwd`
-MAINFILE="camptix-payfast.php" # this should be the name of your main php file in the wordpress plugin
+MAINFILE="facebook-like-thumbnail.php" # this should be the name of your main php file in the wordpress plugin
  
 # git config
 GITPATH="$CURRENTDIR/" # this file should be in the base of your git repository
@@ -49,7 +49,7 @@ read COMMITMSG
 git commit -am "$COMMITMSG"
  
 echo "Tagging new version in git"
-git tag -a "$NEWVERSION1" -m "Tagging version $NEWVERSION1"
+git tag -a "v$NEWVERSION1" -m "Tagging version v$NEWVERSION1"
  
 echo "Pushing latest commit to origin, with tags"
 git push origin master
