@@ -14,7 +14,7 @@ Fixes the problem of random thumbnail used by Facebook when someone like/share
 
 == Description ==
 
-Plugin will set the thumbnail used by Facebook to featured thumbnail if available, then fallback to first image of the post and then fallback to a default image as a last resort. Also it will use the default image for your front page and for anything else, it will use the first image of the first post of the loop. You can read explanation on this post - <a href="http://blog.ashfame.com/2011/02/wordpress-plugin-fix-facebook-like-thumbnail/">Facebook Like Thumbnail WordPress plugin</a>
+Plugin for specifying which thumbnail to use for links liked/shared on Facebook. It just works! If it doesn’t work for you, let me know by creating an issue here - https://github.com/ashfame/facebook-like-thumbnail/issues
 
 == Installation ==
 
@@ -27,6 +27,11 @@ Plugin will set the thumbnail used by Facebook to featured thumbnail if availabl
 = How do I change the default image to be used? =
 
 Go to Settings > Facebook Like Thumbnail and enter URL to the default image you would like to use
+
+= When is the default image used? =
+
+When plugin can’t figure out the image to use in any context, then it will use the default image.
+
 
 = Why does it still show an incorrect thumbnail? =
 
