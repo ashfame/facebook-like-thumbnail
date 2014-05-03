@@ -63,7 +63,7 @@ class Ashfame_Facebook_Like_Thumbnail_Admin {
 
 	function fb_like_default_setting() {
 		$options = get_option( 'fb_like_thumbnail' );
-		echo "<input id='fb_like_default' name='fb_like_thumbnail[default]' size='60' type='text' value='{$options['default']}' />";
+		echo "<input id='fb_like_default' name='fb_like_thumbnail[default]' size='60' type='text' value='{$options['default']}' placeholder='http://example.com/logo.jpg' />";
 	}
 
 	function fb_like_thumbnail_validate( $input ) {
