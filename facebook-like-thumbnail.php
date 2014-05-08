@@ -81,17 +81,22 @@ class Ashfame_Facebook_Like_Thumbnail {
 		// check for attachments (ACF modules or any sort of gallery plugins should be covered here), only if needed
 		if ( empty( $media ) && is_singular() ) {
 
-			$attachments = get_posts(
-				array(
-					'post_type' => 'attachment',
-					'numberposts' => 1,
-					'post_status' => 'publish',
-					'post_parent' => get_the_ID()
-				)
-			);
+			if ( function_exists( 'get_attached_media' ) ) {
+				$attachments = get_attached_media( 'image', get_the_ID() );
+			} else {
+				// WordPress prior to v3.6
+				$attachments = get_posts(
+					array(
+						'post_type' => 'attachment',
+						'numberposts' => 1,
+						'post_parent' => get_the_ID()
+					)
+				);
+				// @TODO possible filtering of attachments by MIME type, if user don't have the option to upgrade WordPress to its latest version
+			}
 
 			if ( $attachments ) {
-				$media = wp_get_attachment_thumb_url( $attachments[0]->ID ); // @TODO possible filtering of attachments by extensions here, not all attachments are going to be media files
+				$media = wp_get_attachment_thumb_url( $attachments[0]->ID );
 				self::$meta_og_where = 'first attachment';
 			}
 		}
