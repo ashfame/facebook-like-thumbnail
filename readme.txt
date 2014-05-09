@@ -37,6 +37,9 @@ Facebook will update it for all the pages within 24hrs. If you want to refresh f
 
 == Changelog ==
 
+= 0.3.2 =
+Query fix when attachments are scanned for current singular item (post/page etc)
+
 = 0.3.1 =
 Minor fixes
 
