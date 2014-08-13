@@ -87,9 +87,12 @@ class Ashfame_Facebook_Like_Thumbnail {
 		}
 
 		// check for featured thumbnail, if needed
-		if ( empty( $media ) && get_post_thumbnail_id() ) {
-			$media = wp_get_attachment_url( get_post_thumbnail_id() );
-			self::$meta_og_where = 'featured thumbnail';
+		if ( empty( $media ) && is_singular() ) {
+			$featured_thumbnail = get_post_thumbnail_id( get_queried_object_id() );
+			if ( $featured_thumbnail ) {
+				$media = wp_get_attachment_url( $featured_thumbnail );
+				self::$meta_og_where = 'featured thumbnail';
+			}
 		}
 
 		// check for attachments (ACF modules or any sort of gallery plugins should be covered here), only if needed
