@@ -116,6 +116,11 @@ class Ashfame_Facebook_Like_Thumbnail {
 			}
 		}
 
+		if ( empty( $media ) && is_attachment() ) {
+			self::$meta_og_image = wp_get_attachment_url( get_queried_object_id() );
+			self::$meta_og_where = 'attachment';
+		}
+
 		// assign default media image if we didn't manage to get one specific to context
 		if ( ! empty( $media ) ) {
 			self::$meta_og_image = $media;
