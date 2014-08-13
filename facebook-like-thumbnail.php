@@ -110,7 +110,8 @@ class Ashfame_Facebook_Like_Thumbnail {
 			}
 
 			if ( $attachments ) {
-				$media = wp_get_attachment_thumb_url( $attachments[0]->ID );
+				$media = reset( $attachments ); // reset internal array pointer and returns the first element of the array
+				$media = wp_get_attachment_url( $media->ID );
 				self::$meta_og_where = 'first attachment';
 			}
 		}
