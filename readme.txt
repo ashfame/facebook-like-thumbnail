@@ -5,7 +5,7 @@ Plugin URI: http://wordpress.org/plugins/facebook-like-thumbnail/
 Tags: facebook
 Author: Ashfame
 Author URI: http://ashfame.com/
-Requires at least: 2.7
+Requires at least: 3.1
 Tested up to: 3.9.2
 Stable tag: trunk
 

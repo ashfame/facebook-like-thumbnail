@@ -19,7 +19,7 @@ is_admin() && require plugin_dir_path( __FILE__ ) . 'admin.php';
 class Ashfame_Facebook_Like_Thumbnail {
 
 	public static $version = '0.3.2';
-	public static $required_wp_version = '2.7';
+	public static $required_wp_version = '3.1';
 	public static $options;
 	public static $meta_og_image; // Static variable so that it can be reused for custom code, for instance when constructing pinterest sharing link, this media image can be used
 	public static $meta_og_where = 'default fallback';
@@ -96,14 +96,14 @@ class Ashfame_Facebook_Like_Thumbnail {
 		if ( empty( $media ) && is_singular() ) {
 
 			if ( function_exists( 'get_attached_media' ) ) {
-				$attachments = get_attached_media( 'image', get_the_ID() );
+				$attachments = get_attached_media( 'image', get_queried_object_id() );
 			} else {
 				// WordPress prior to v3.6
 				$attachments = get_posts(
 					array(
 						'post_type' => 'attachment',
 						'numberposts' => 1,
-						'post_parent' => get_the_ID()
+						'post_parent' => get_queried_object_id()
 					)
 				);
 				// @TODO possible filtering of attachments by MIME type, if user don't have the option to upgrade WordPress to its latest version
