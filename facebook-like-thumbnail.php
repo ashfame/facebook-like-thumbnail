@@ -24,6 +24,10 @@ class Ashfame_Facebook_Like_Thumbnail {
 	public static $meta_og_where = 'default fallback';
 
 	public function __construct() {
+		add_action( 'plugins_loaded', array( $this, 'init' ) );
+	}
+
+	public function init() {
 		// set defaults
 		self::$options = get_option( 'fb_like_thumbnail' );
 		self::$meta_og_image = apply_filters( 'fb_like_thumbnail_default', self::$options['default'] );
