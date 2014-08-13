@@ -5,7 +5,7 @@
  * Description: Figures out the thumbnail image to be used for Facebook & Other sites depending on meta:og tag
  * Author: Ashfame
  * Author URI: http://ashfame.com/
- * Version: 0.3.3
+ * Version: 0.3.4-dev
  * License: GPL
  * Notes: This plugin only do the job of assigning meta:og image to pages. Title and description are easily picked up from meta info or derived from page's content.
  */
@@ -18,7 +18,7 @@ is_admin() && require plugin_dir_path( __FILE__ ) . 'admin.php';
 
 class Ashfame_Facebook_Like_Thumbnail {
 
-	public static $version = '0.3.3';
+	public static $version = '0.3.4-dev';
 	public static $required_wp_version = '3.1';
 	public static $options;
 	public static $meta_og_image; // Static variable so that it can be reused for custom code, for instance when constructing pinterest sharing link, this media image can be used
