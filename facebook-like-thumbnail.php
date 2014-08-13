@@ -19,12 +19,15 @@ is_admin() && require plugin_dir_path( __FILE__ ) . 'admin.php';
 class Ashfame_Facebook_Like_Thumbnail {
 
 	public static $version = '0.3.2';
+	public static $required_wp_version = '2.7';
 	public static $options;
 	public static $meta_og_image; // Static variable so that it can be reused for custom code, for instance when constructing pinterest sharing link, this media image can be used
 	public static $meta_og_where = 'default fallback';
 
 	public function __construct() {
-		add_action( 'plugins_loaded', array( $this, 'init' ) );
+		if ( $this->is_compatible() ) {
+			add_action( 'plugins_loaded', array( $this, 'init' ) );
+		}
 	}
 
 	public function init() {
@@ -38,6 +41,11 @@ class Ashfame_Facebook_Like_Thumbnail {
 
 		// Paid Support link in plugins listing
 		add_filter( 'plugin_action_links', array( $this, 'support_plugin_action_link' ), 10, 2 );
+	}
+
+	public function is_compatible() {
+		global $wp_version;
+		return version_compare( $wp_version, self::$required_wp_version, '>=' );
 	}
 
 	public function bail() {
