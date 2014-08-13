@@ -37,12 +37,14 @@ class Ashfame_Facebook_Like_Thumbnail {
 	}
 
 	public function bail() {
+		$return = false;
+
 		// WooCommerce pages
 		if ( is_page( 'cart' ) || is_page( 'checkout' ) || is_page( 'my-account' ) ) {
-			return true;
+			$return = true;
 		}
 
-		return apply_filters( 'fb_like_thumbnail_bail', false ); // Filter here if you need to set exclusion on pages, best to do this on pages which are only meant for logged in users, saves database queries
+		return apply_filters( 'fb_like_thumbnail_bail', $return ); // Filter here if you need to set exclusion on pages, best to do this on pages which are only meant for logged in users, saves database queries
 	}
 
 	public function figure_out_media_image_for_social_networks() {
