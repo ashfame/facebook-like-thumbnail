@@ -37,9 +37,13 @@ Facebook will update it for all the pages within 24hrs. If you want to refresh f
 
 == Changelog ==
 
+= 0.3.4 =
+Added support for attachment page view
+Better way of checking for attached featured thumbnail
+
 = 0.3.3 =
 Fixed a bug with retrieving attachments correctly
-Check minimum WordPress version compaibility
+Check minimum WordPress version compatibility
 Enhancements in architecture
 
 = 0.3.2 =
