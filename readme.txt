@@ -38,31 +38,31 @@ Facebook will update it for all the pages within 24hrs. If you want to refresh f
 == Changelog ==
 
 = 0.3.4 =
-Added support for attachment page view
-Better way of checking for attached featured thumbnail
+* Added support for attachment page view
+* Better way of checking for attached featured thumbnail
 
 = 0.3.3 =
-Fixed a bug with retrieving attachments correctly
-Check minimum WordPress version compatibility
-Enhancements in architecture
+* Fixed a bug with retrieving attachments correctly
+* Check minimum WordPress version compatibility
+* Enhancements in architecture
 
 = 0.3.2 =
-Query fix when attachments are scanned for current singular item (post/page etc)
+* Query fix when attachments are scanned for current singular item (post/page etc)
 
 = 0.3.1 =
-Minor fixes
+* Minor fixes
 
 = 0.3 =
-Complete rewrite with better architecture and the ability to plug in custom logic for figuring out media image
+* Complete rewrite with better architecture and the ability to plug in custom logic for figuring out media image
 
 = 0.2 =
-Switched to FB recommended meta tag og:image
-Use featured thumbnails if they exist, with a fallback to first image in the post & then the default one
-Frontpage & Search page uses the default image
-Added options page to enter default image URL, no more plugin editing required
-Deleting the plugin via WordPress dashboard will uninstall the saved data in the database
-Now supports Nextgen gallery when not using the slideshow mode (and hopefully similar ones too)
-Plugin now requires atleast WordPress 2.7 to run
+* Switched to FB recommended meta tag og:image
+* Use featured thumbnails if they exist, with a fallback to first image in the post & then the default one
+* Frontpage & Search page uses the default image
+* Added options page to enter default image URL, no more plugin editing required
+* Deleting the plugin via WordPress dashboard will uninstall the saved data in the database
+* Now supports Nextgen gallery when not using the slideshow mode (and hopefully similar ones too)
+* Plugin now requires atleast WordPress 2.7 to run
 
 = 0.1 =
-Basic plugin! Edit required for changing the default fallback image
+* Basic plugin! Edit required for changing the default fallback image
