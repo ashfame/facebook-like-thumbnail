@@ -37,6 +37,9 @@ Facebook will update it for all the pages within 24hrs. If you want to refresh f
 
 == Changelog ==
 
+= 0.4 =
+* Use of WP Media library to specify default thumbnail image
+
 = 0.3.4 =
 * Added support for attachment page view
 * Better way of checking for attached featured thumbnail
