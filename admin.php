@@ -10,7 +10,7 @@ class Ashfame_Facebook_Like_Thumbnail_Admin {
 		add_action( 'admin_menu', array( $this, 'fb_like_thumbnail_page' ) );
 		// Settings API
 		add_action( 'admin_init', array( $this, 'fb_like_thumbnail_init' ) );
-		//Admin scripts and styles
+		// Admin scripts and styles
 		add_action( 'admin_enqueue_scripts', array( $this, 'fb_enqueue_scripts' ) );
 	}
 
@@ -80,11 +80,11 @@ class Ashfame_Facebook_Like_Thumbnail_Admin {
 
 		<!--	image display container	-->
 		<div id="fb_default_img_container">
-			<img src="<?php echo $options['default']; ?>" width='150'>
+			<img src="<?php echo $options['default']; ?>" width="150" />
 		</div>
 
 		<!--	setting input field	-->
-		<input id='fb_like_default' name='fb_like_thumbnail[default]' size='60' type='text' value='<?php echo $options['default']; ?>' placeholder='http://example.com/logo.jpg'/>
+		<input id="fb_like_default" name="fb_like_thumbnail[default]" size="60" type="text" value="<?php echo $options['default']; ?>" placeholder="http://example.com/logo.jpg" />
 		<?php
 	}
 
@@ -102,7 +102,7 @@ class Ashfame_Facebook_Like_Thumbnail_Admin {
 	}
 
 	function fb_enqueue_scripts(){
-		if( isset( $_GET['page'] ) && 'fb-like-thumbnail' === $_GET['page'] ) {
+		if ( isset( $_GET['page'] ) && 'fb-like-thumbnail' === $_GET['page'] ) {
 			wp_enqueue_media();
 			wp_enqueue_script( 'upload-media-js', plugins_url( 'js/script.js' , __FILE__ ) );
 		}
