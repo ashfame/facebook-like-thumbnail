@@ -75,7 +75,7 @@ class Ashfame_Facebook_Like_Thumbnail_Admin {
 
 		<!--	input button which open media setting to upload/set image on click	-->
 		<div id="fb_image_uploader">
-			<input id="fb_set_image" type="button" class="button button-primary" value="Set Thumbnail">
+			<input id="fb_set_image" type="button" class="button button-secondary" value="Set Thumbnail" />
 		</div>
 
 		<!--	image display container	-->
