@@ -2,7 +2,7 @@
 Contributors: ashfame
 Plugin Name: Facebook Like Thumbnail
 Plugin URI: http://wordpress.org/plugins/facebook-like-thumbnail/
-Tags: facebook
+Tags: facebook, thumbnail, thumbnails, og:image, open graph, graph, facebook share, facebook thumbnail
 Author: Ashfame
 Author URI: http://ashfame.com/
 Requires at least: 3.1
