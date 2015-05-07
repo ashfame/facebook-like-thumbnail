@@ -13,7 +13,21 @@ Plugin for specifying context specific images to be used as thumbnail for links 
 
 == Description ==
 
-Plugin for specifying which thumbnail to use for links liked/shared on Facebook. It just works! If it doesn’t work for you, let me know by creating an issue here - https://github.com/ashfame/facebook-like-thumbnail/issues
+Plugin for specifying which thumbnail to use for links liked/shared on Facebook.
+
+= Archive page =
+
+Get a media attached to the first post it can find
+
+= Singular page =
+
+* Use featured thumbnail when available
+* Use one of the media attached, when available
+* Fallbacks to the default image (like a logo which can be specified in settings)
+
+Filters are available if you want to shortcircuit the logic or want to add yours.
+
+It just works! If it doesn’t work for you, let me know by creating an issue here - https://github.com/ashfame/facebook-like-thumbnail/issues
 
 == Installation ==
 
@@ -30,6 +44,10 @@ Go to Settings > Facebook Like Thumbnail and enter URL to the default image you 
 = When is the default image used? =
 
 When plugin can’t figure out the image to use in any context, then it will use the default image.
+
+= Is it possible to add my own logic or shortcircuit existing logic? =
+
+Yes! Take a look at plugin's source code, pretty easy to hack away! :-)
 
 = Why does it still show an incorrect thumbnail? =
 
