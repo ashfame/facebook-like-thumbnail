@@ -6,6 +6,7 @@
  * Author: Ashfame
  * Author URI: http://ashfame.com/
  * Version: 0.4
+ * Text Domain: facebook-like-thumbnail
  * License: GPL
  * Notes: This plugin only do the job of assigning meta:og image to pages. Title and description are easily picked up from meta info or derived from page's content.
  */
@@ -137,9 +138,9 @@ class Ashfame_Facebook_Like_Thumbnail {
 	public function support_plugin_action_link( $links, $file ) {
 		// Also check using strpos because when plugin is actually a symlink inside plugins folder, its plugin_basename will be based off its actual path
 		if ( $file == plugin_basename( __FILE__ ) || strpos( plugin_basename( __FILE__ ), $file ) !== false ) {
-			$settings_link = '<a href="' . admin_url( 'options-general.php?page=fb-like-thumbnail' ) . '">Settings</a>';
-			$support_link = '<a href="mailto:mail@ashfame.com?subject=' . rawurlencode('Premium Support') . '">Premium Support</a>';
-			$report_issue_link = '<a href="https://github.com/ashfame/facebook-like-thumbnail/issues">Report Issue</a>';
+			$settings_link = '<a href="' . admin_url( 'options-general.php?page=fb-like-thumbnail' ) . '">' . __( 'Settings', 'facebook-like-thumbnail' ) . '</a>';
+			$support_link = '<a href="mailto:mail@ashfame.com?subject=' . rawurlencode( 'Premium Support' ) . '">' . __( 'Premium Support', 'facebook-like-thumbnail' ) . '</a>';
+			$report_issue_link = '<a href="https://github.com/ashfame/facebook-like-thumbnail/issues">' . __( 'Report Issue', 'facebook-like-thumbnail' ) . '</a>';
 			$links = array_merge( array( $settings_link, $support_link, $report_issue_link ), $links );
 		}
 

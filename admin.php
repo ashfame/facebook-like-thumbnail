@@ -15,7 +15,7 @@ class Ashfame_Facebook_Like_Thumbnail_Admin {
 	}
 
 	public function fb_like_thumbnail_page() {
-		$fb_like_thumbnail_admin_hook = add_options_page( 'Facebook Like Thumbnail Setting', 'Facebook Like Thumbnail', 'manage_options', 'fb-like-thumbnail', array( $this, 'fb_like_thumbnail_options_page' ) );
+		$fb_like_thumbnail_admin_hook = add_options_page( __( 'Facebook Like Thumbnail Setting', 'facebook-like-thumbnail' ), __( 'Facebook Like Thumbnail', 'facebook-like-thumbnail' ), 'manage_options', 'fb-like-thumbnail', array( $this, 'fb_like_thumbnail_options_page' ) );
 	}
 
 	/**
@@ -24,7 +24,7 @@ class Ashfame_Facebook_Like_Thumbnail_Admin {
 	public function fb_like_thumbnail_options_page() {
 		?>
 		<div class="wrap">
-			<h2>Facebook Like Thumbnail</h2>
+			<h2><?php _e( 'Facebook Like Thumbnail', 'facebook-like-thumbnail' ); ?></h2>
 
 			<form action="options.php" method="post">
 				<?php settings_fields( 'fb_like_thumbnail_options' ); ?>
@@ -44,13 +44,13 @@ class Ashfame_Facebook_Like_Thumbnail_Admin {
 		);
 		add_settings_section(
 			'default',			// settings section (a setting page must have a default section, since we created a new settings page, we need to create a default section too)
-			'Main settings',		// section title
+			__( 'Main settings', 'facebook-like-thumbnail' ),		// section title
 			array( $this, 'fb_like_section_text' ),		// text for the section
 			'fb_like_thumbnail'		// specify the output of this section on the options page, same as in do_settings_section
 		);
 		add_settings_field(
 			'fb_like_default',		// field ID
-			'Default FB Like thumbnail',	// Field title
+			__( 'Default FB Like thumbnail', 'facebook-like-thumbnail' ),	// Field title
 			array( $this, 'fb_like_default_setting' ),	// display callback
 			'fb_like_thumbnail',		// which settings page?
 			'default'			// which settings section?
@@ -58,9 +58,7 @@ class Ashfame_Facebook_Like_Thumbnail_Admin {
 	}
 
 	public function fb_like_section_text() {
-		?>
-		Specify the default fallback image to be used. Using a logo or something similar is recommened.
-		<?php
+		_e( 'Specify the default fallback image to be used. Using a logo or something similar is recommended.', 'facebook-like-thumbnail' );
 	}
 
 	function fb_like_default_setting() {
@@ -94,7 +92,7 @@ class Ashfame_Facebook_Like_Thumbnail_Admin {
 			add_settings_error(
 				'fb_like_default',				// title (?)
 				'fb_like_default_url_error',			// error ID (?)
-				'Invalid link! Please enter a proper link',	// error message
+				__( 'Invalid link! Please enter a proper link', 'facebook-like-thumbnail' ),	// error message
 				'error'						// message type
 			);
 		}
