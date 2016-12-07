@@ -6,7 +6,7 @@ Tags: facebook, thumbnail, thumbnails, og:image, open graph, graph, facebook sha
 Author: Ashfame
 Author URI: http://ashfame.com/
 Requires at least: 3.1
-Tested up to: 4.5.3
+Tested up to: 4.7
 Stable tag: trunk
 
 Plugin for specifying context specific images to be used as thumbnail for links liked/shared on Facebook.
