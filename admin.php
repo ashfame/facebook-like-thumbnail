@@ -92,7 +92,7 @@ class Ashfame_Facebook_Like_Thumbnail_Admin {
 			add_settings_error(
 				'fb_like_default',				// title (?)
 				'fb_like_default_url_error',			// error ID (?)
-				__( 'Invalid link! Please enter a proper link', 'facebook-like-thumbnail' ),	// error message
+				__( 'Invalid link! Please enter a valid link.', 'facebook-like-thumbnail' ),	// error message
 				'error'						// message type
 			);
 		}
