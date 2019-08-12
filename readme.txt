@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: ashfame
-Plugin Name: FB Like Thumbnail
+Plugin Name: Like Thumbnail
 Plugin URI: http://wordpress.org/plugins/facebook-like-thumbnail/
 Tags: facebook, thumbnail, thumbnails, og:image, open graph, graph, facebook share, facebook thumbnail
 Author: Ashfame
