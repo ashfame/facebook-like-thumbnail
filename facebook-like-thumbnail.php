@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: FB Like Thumbnail
+ * Plugin Name: Like Thumbnail
  * Plugin URI: http://wordpress.org/plugins/facebook-like-thumbnail/
  * Description: Figures out the thumbnail image to be used for Facebook & Other sites depending on meta:og tag
  * Author: Ashfame
